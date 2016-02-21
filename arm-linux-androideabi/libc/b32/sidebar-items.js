@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["sigaction",""]],"type":[["mode_t",""]]});
