@@ -350,15 +350,10 @@ fn main() {
             // they're implemented on rumprun yet, just let them slide for now.
             // Some of them look like they have headers but then don't have
             // corresponding actual definitions either...
-            "backtrace" |
-            "pthread_main_np" |
-            "pthread_set_name_np" |
-            "pthread_stackseg_np" |
             "shm_open" |
             "shm_unlink" |
             "syscall" |
-            "ptrace" |
-            "sigaltstack" if rumprun => true,
+            "ptrace" if rumprun => true,
 
             // There seems to be a small error in EGLIBC's eventfd.h header. The
             // [underlying system call][1] always takes its first `count`
