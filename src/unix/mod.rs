@@ -143,6 +143,9 @@ cfg_if! {
     } else if #[cfg(target_os = "emscripten")] {
         #[link(name = "c")]
         extern {}
+    } else if #[cfg(all(target_vendor = "rumprun", target_os = "netbsd"))] {
+        #[link(name = "m")]
+        extern {}
     } else if #[cfg(any(target_os = "macos",
                         target_os = "ios",
                         target_os = "android",
